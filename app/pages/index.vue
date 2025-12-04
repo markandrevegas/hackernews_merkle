@@ -15,13 +15,24 @@ const today = new Date().toLocaleDateString('en-US', {
 			<h1>{{ message }}</h1>
 		</div>
 		<div class="app-content">
-      <div v-for="i in 10" :key="i" class="card">
-				<div style="display:flex; flex-direction:column; gap:8px; flex:1">
+      <div v-for="i in 10" :key="i">
+				<div v-if="i === 1" class="card-first">
+					<img :src="`https://picsum.photos/seed/${i}/360/250`" alt="">
 					<h2>Story Title {{ i }}</h2>
-					<p>Lorem ipsum dolor, sit amet consectetur</p>
+					<div class="card-first__layout">
+						<div>
+							<img :src="`https://picsum.photos/seed/${i}/40/40`" alt="" style="border-radius:50%">
+							<span style="color:var(--dark)">Author Name</span>
+						</div>
+						<div><span>{{ today }}</span></div>
+					</div>
 				</div>
-				
-        <img :src="`https://picsum.photos/seed/${i}/80/64`" alt="">
+				<div v-else class="card">
+					<img :src="`https://picsum.photos/seed/${i}/90/90`" alt="">
+					<div class="card-text">
+						<h2>Story Title {{ i }}</h2>
+					</div>
+				</div>
       </div>
     </div>
     <div class="app-footer">
