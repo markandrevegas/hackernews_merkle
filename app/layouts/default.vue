@@ -1,9 +1,6 @@
 <template>
-	<div class="app-container">
+	<div>
 		<NuxtPage />
-		<footer>
-			<p>© 2024 My Nuxt App</p>
-		</footer>
 	</div>
 </template>
 
