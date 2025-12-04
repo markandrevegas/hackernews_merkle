@@ -13,7 +13,10 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: var(--background-color);
-	color: #333;
-	display: flex;
-	justify-content: center;
+}
+h1 {
+	color: var(--primary-color);
+}
+.app-container {
+	flex: 1;
 }
