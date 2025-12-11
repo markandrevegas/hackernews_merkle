@@ -8,10 +8,6 @@ localStorage was used to cache the initial response from
 Developed over 5.5 hours using 30min sprints.
 Dummy images from [Picsum](https://picsum.photos/seed)
 
-Screen recording for mobile
-[mobile view](https://www.awesomescreenshot.com/video/47374076?key=6c28a70fa96ff3f6710cee441f0b69e0)
-
-
 
 ## Setup
 

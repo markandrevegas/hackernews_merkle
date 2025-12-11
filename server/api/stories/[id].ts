@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
 		console.error(error)
 		throw createError({
 			statusCode: 500,
-			statusMessage: "Failed to retrieve story " + storyId + " from external API."
+			statusMessage: "Failed to retrieve story " + storyId + " from hacker-news api"
 		})
 	}
 })
