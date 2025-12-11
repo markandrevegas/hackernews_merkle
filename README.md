@@ -1,43 +1,50 @@
 # Hackernews Assignment | Nuxt Minimal Starter
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+There are no plugins, UI frameworks, or CSS frameworks installed. Prettier is part of my normal workflow as i like my work to be easy to read (for myself).
+
+localStorage was used to cache the initial response from
+[https://hacker-news.firebaseio.com/v0/topstories.json](https://hacker-news.firebaseio.com/v0/topstories.json)
+
+Developed over 5.5 hours using 30min sprints.
+Dummy images from [Picsum](https://picsum.photos/seed)
+
+Screen recording for mobile
+[mobile view](https://www.awesomescreenshot.com/video/47374076?key=6c28a70fa96ff3f6710cee441f0b69e0)
+
+
 
 ## Setup
 
 Make sure to install dependencies:
-
 ```bash
-# npm
-npm install
-
+# yarn
+yarn install
 ```
 
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
-
 ```bash
-# npm
-npm run dev
-
+# yarn
+yarn run dev
 ```
 
 ## Production
 
 Build the application for production:
-
 ```bash
-# npm
-npm run build
-
+# yarn
+yarn run build
 ```
 
 Locally preview production build:
-
 ```bash
-# npm
-npm run preview
-
+# yarn
+yarn run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Format script:
+```bash
+# yarn
+yarn run format
+```

@@ -1,13 +1,13 @@
 // types/hacker-news.ts
 export interface Article {
 	id: number
-	by: string // The author's unique ID
+	by: string // author ID
 	descendants?: number // Number of comments
 	kids?: number[] // IDs of the comments
 	score: number
 	time: number
 	title: string
-	type: "story" | "job" | "comment" | "poll" | "pollopt"
+	type: 'story' | 'job' | 'comment' | 'poll' | 'pollopt'
 	url: string
 	deleted?: boolean
 	dead?: boolean
