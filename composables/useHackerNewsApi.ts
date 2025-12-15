@@ -2,10 +2,12 @@
 import type { Article, User, ArticleAndUser } from '~/types/hacker-news'
 
 export const useHackerNews = () => {
-
 	// get the articles and authors
 	const story = (id: number) => $fetch<Article>('/api/stories/' + id)
 	const user = (id: string) => $fetch<User>('/api/users/' + id)
+
+	// todo
+	// better refs - include loading and error
 
 	// function to get top 10 as random
 	const randomIds = (arr: number[], n = 10) => {
@@ -18,6 +20,8 @@ export const useHackerNews = () => {
 	}
 
 	const getData = async (itemCount = 10): Promise<ArticleAndUser[]> => {
+		// todo - include data loading error states as null // try/catch/finally
+		
 		// check if there are any cached stories
 		if (process.client) {
 			const cached = localStorage.getItem('cachedStories')
@@ -25,6 +29,7 @@ export const useHackerNews = () => {
 				return JSON.parse(cached) as ArticleAndUser[]
 			}
 		}
+
 		// if not cached, fetch from hn using server/api
 		// Fetch top story IDs
 		const top = await $fetch<number[]>('/api/stories/top').catch(() => [])
